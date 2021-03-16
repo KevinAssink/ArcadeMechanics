@@ -124,7 +124,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 7
 --- !u!61 &5836243356488170288
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -163,3 +163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14cccfa0c944601409cc3a0d8b4745c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemy: {fileID: 147846}
+  enemyProjectile: {fileID: 3831714764373761651, guid: 5901a14c9d39a264890bff9408fd0565,
+    type: 3}
+  enemyProjectileClone: {fileID: 0}

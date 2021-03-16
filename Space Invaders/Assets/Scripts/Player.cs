@@ -17,8 +17,11 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(GameManager.lives > 0)
+        {
         movement();
         shoot(); 
+        }
     }
 
     void movement()
@@ -45,8 +48,7 @@ public class Player : MonoBehaviour
 
     void shoot()
     {
-        if (Input.GetKeyDown(KeyCode.Space))  
-        // && projectileClone == null
+        if (Input.GetKeyDown(KeyCode.Space)&& projectileClone == null)  
         {
             projectileClone = Instantiate(projectile, new Vector3(player.transform.position.x, player.transform.position.y + 0.6f, 0), player.transform.rotation) as GameObject;
         }
