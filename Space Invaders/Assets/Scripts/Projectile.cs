@@ -23,12 +23,14 @@ public class Projectile : MonoBehaviour
         if(collision.gameObject.tag == "Enemy")
         {
             Destroy(collision.gameObject); 
-            Destroy(projectile); 
+            Destroy(projectile);
+            ScoreScript.scoreValue += 1;
 
             GameManager.playGame = true;
         }
         if(collision.gameObject.tag == "Finish")
         {
+            
             Destroy(projectile);    
         }
     }
